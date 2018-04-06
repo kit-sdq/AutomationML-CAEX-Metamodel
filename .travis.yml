@@ -13,5 +13,5 @@ install: true
 script: mvn clean verify
 
 after_success:
-- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/caex releng/edu.kit.ipd.sdq.metamodels.caex.updatesite.aggregated final kit-sdq updatesite
+- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/caex releng/caex.updatesite.aggregated final kit-sdq updatesite
 
