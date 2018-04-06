@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="caex.caex30.feature"
+      label="%featureName"
+      version="0.2.0.qualifier"
+      provider-name="%providerName">
+      <!-- license-feature="tools.vitruv.license.feature"
+      license-feature-version="1.0.0"> -->
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+ <!--   <license url="%licenseURL">
+      %license
+   </license> -->
+
+   <requires>
+      <import plugin="org.junit"/>
+      <import plugin="org.eclipse.core.runtime"/>
+	  <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+	  <!-- are plugins for edit/editor needed here? -->
+   </requires>
+
+   <plugin
+         id="caex.caex30"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+		 
+   <plugin
+         id="caex.caex30.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>	
+
+		 
+   <plugin
+         id="caex.caex30.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>			 
+		 
+   <plugin
+         id="caex.anytype"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+		 
+   <plugin
+         id="caex.anytype.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>		 
+
+</feature>

@@ -1,0 +1,17 @@
+language: java
+sudo: false
+jdk:
+  - oraclejdk8
+cache:  
+  directories:  
+   - $HOME/.m2  
+
+before_install:
+    - git clone --depth 1 https://github.com/kit-sdq/BuildUtilities.git /tmp/BuildUtilities
+install: true
+
+script: mvn clean verify
+
+after_success:
+- . /tmp/BuildUtilities/travis-ci/deploy.sh metamodels/caex releng/edu.kit.ipd.sdq.metamodels.caex.updatesite.aggregated final kit-sdq updatesite
+
