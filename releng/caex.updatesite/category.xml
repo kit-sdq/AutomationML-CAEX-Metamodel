@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/caex.caex30.feature_0.2.0.qualifier.jar" id="caex.caex30.feature" version="0.2.0.qualifier">
+      <category name="Metamodels"/>
+   </feature>
+   <category-def name="Metamodels" label="Metamodels">
+      <description>
+         Metamodels provided by SDQ
+      </description>
+   </category-def>
+</site>
