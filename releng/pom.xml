@@ -15,7 +15,6 @@
 
 	<modules>
 		<module>caex.updatesite</module>
-		<module>caex.updatesite.aggregated</module>
 	</modules>
 
 </project>
