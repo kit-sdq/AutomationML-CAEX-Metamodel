@@ -49,6 +49,7 @@ public class RoleRequirementsItemProvider extends CAEXBasicObjectItemProvider {
 
 			addRoleClassPropertyDescriptor(object);
 			addRefBaseRoleClassPathPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,28 @@ public class RoleRequirementsItemProvider extends CAEXBasicObjectItemProvider {
 				 getString("_UI_RoleRequirements_refBaseRoleClassPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoleRequirements_refBaseRoleClassPath_feature", "_UI_RoleRequirements_type"),
 				 CAEXPackage.Literals.ROLE_REQUIREMENTS__REF_BASE_ROLE_CLASS_PATH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RoleRequirements_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RoleRequirements_name_feature", "_UI_RoleRequirements_type"),
+				 CAEXPackage.Literals.ROLE_REQUIREMENTS__NAME,
 				 true,
 				 false,
 				 false,
@@ -171,6 +194,7 @@ public class RoleRequirementsItemProvider extends CAEXBasicObjectItemProvider {
 
 		switch (notification.getFeatureID(RoleRequirements.class)) {
 			case CAEXPackage.ROLE_REQUIREMENTS__REF_BASE_ROLE_CLASS_PATH:
+			case CAEXPackage.ROLE_REQUIREMENTS__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CAEXPackage.ROLE_REQUIREMENTS__ATTRIBUTE:
@@ -207,11 +231,6 @@ public class RoleRequirementsItemProvider extends CAEXBasicObjectItemProvider {
 			(createChildParameter
 				(CAEXPackage.Literals.ROLE_REQUIREMENTS__EXTERNAL_INTERFACE,
 				 CAEXFactory.eINSTANCE.createInterfaceClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CAEXPackage.Literals.ROLE_REQUIREMENTS__EXTERNAL_INTERFACE,
-				 CAEXFactory.eINSTANCE.createExternalInterface()));
 
 		newChildDescriptors.add
 			(createChildParameter
