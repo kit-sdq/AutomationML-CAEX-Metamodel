@@ -210,22 +210,12 @@ public class InterfaceClassItemProvider extends CAEXObjectItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CAEXPackage.Literals.INTERFACE_CLASS__INTERFACE_CLASS,
-				 CAEXFactory.eINSTANCE.createExternalInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CAEXPackage.Literals.INTERFACE_CLASS__INTERFACE_CLASS,
 				 CAEXFactory.eINSTANCE.createInterfaceFamily()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CAEXPackage.Literals.INTERFACE_CLASS__EXTERNAL_INTERFACE,
 				 CAEXFactory.eINSTANCE.createInterfaceClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CAEXPackage.Literals.INTERFACE_CLASS__EXTERNAL_INTERFACE,
-				 CAEXFactory.eINSTANCE.createExternalInterface()));
 
 		newChildDescriptors.add
 			(createChildParameter

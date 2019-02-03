@@ -17,6 +17,10 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -156,8 +160,64 @@ public class DocumentRootItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CAEXPackage.Literals.DOCUMENT_ROOT__MIXED,
+				 FeatureMapUtil.createEntry
+					(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__COMMENT,
+					 "")));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CAEXPackage.Literals.DOCUMENT_ROOT__MIXED,
+				 FeatureMapUtil.createEntry
+					(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__TEXT,
+					 "")));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CAEXPackage.Literals.DOCUMENT_ROOT__MIXED,
+				 FeatureMapUtil.createEntry
+					(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__PROCESSING_INSTRUCTION,
+					 XMLTypeFactory.eINSTANCE.createProcessingInstruction())));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CAEXPackage.Literals.DOCUMENT_ROOT__MIXED,
+				 FeatureMapUtil.createEntry
+					(CAEXPackage.Literals.DOCUMENT_ROOT__CAEX_FILE,
+					 CAEXFactory.eINSTANCE.createCAEXFile())));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CAEXPackage.Literals.DOCUMENT_ROOT__CAEX_FILE,
 				 CAEXFactory.eINSTANCE.createCAEXFile()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		if (childFeature instanceof EStructuralFeature && FeatureMapUtil.isFeatureMap((EStructuralFeature)childFeature)) {
+			FeatureMap.Entry entry = (FeatureMap.Entry)childObject;
+			childFeature = entry.getEStructuralFeature();
+			childObject = entry.getValue();
+		}
+
+		boolean qualify =
+			childFeature == CAEXPackage.Literals.DOCUMENT_ROOT__CAEX_FILE;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

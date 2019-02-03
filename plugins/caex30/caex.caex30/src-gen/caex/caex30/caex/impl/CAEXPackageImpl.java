@@ -1348,6 +1348,15 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoleRequirements_Name() {
+		return (EAttribute)roleRequirementsEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSourceDocumentInformation() {
 		return sourceDocumentInformationEClass;
 	}
@@ -1923,6 +1932,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 		createEReference(roleRequirementsEClass, ROLE_REQUIREMENTS__MAPPING_OBJECT);
 		createEReference(roleRequirementsEClass, ROLE_REQUIREMENTS__ROLE_CLASS);
 		createEAttribute(roleRequirementsEClass, ROLE_REQUIREMENTS__REF_BASE_ROLE_CLASS_PATH);
+		createEAttribute(roleRequirementsEClass, ROLE_REQUIREMENTS__NAME);
 
 		sourceDocumentInformationEClass = createEClass(SOURCE_DOCUMENT_INFORMATION);
 		createEAttribute(sourceDocumentInformationEClass, SOURCE_DOCUMENT_INFORMATION__LAST_WRITING_DATE_TIME);
@@ -2178,6 +2188,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 		initEReference(getRoleRequirements_MappingObject(), this.getMapping(), null, "mappingObject", null, 0, 1, RoleRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoleRequirements_RoleClass(), this.getRoleClass(), null, "roleClass", null, 1, 1, RoleRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRoleRequirements_RefBaseRoleClassPath(), theXMLTypePackage.getString(), "refBaseRoleClassPath", null, 1, 1, RoleRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoleRequirements_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, RoleRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sourceDocumentInformationEClass, SourceDocumentInformation.class, "SourceDocumentInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSourceDocumentInformation_LastWritingDateTime(), theXMLTypePackage.getDateTime(), "lastWritingDateTime", null, 1, 1, SourceDocumentInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

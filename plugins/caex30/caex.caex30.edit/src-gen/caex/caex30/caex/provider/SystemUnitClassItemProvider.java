@@ -216,11 +216,6 @@ public class SystemUnitClassItemProvider extends CAEXObjectItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CAEXPackage.Literals.SYSTEM_UNIT_CLASS__EXTERNAL_INTERFACE,
-				 CAEXFactory.eINSTANCE.createExternalInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CAEXPackage.Literals.SYSTEM_UNIT_CLASS__EXTERNAL_INTERFACE,
 				 CAEXFactory.eINSTANCE.createInterfaceFamily()));
 
 		newChildDescriptors.add
